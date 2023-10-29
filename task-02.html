@@ -7,19 +7,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Task 2</title>
   <style>
-    .input {
-      margin: 30px;
-      display: inline-block;
+    form {
+      width: 200px;
+      margin-left: 50px;
+      text-align: center;
     }
+
+    fieldset {
+      border-radius: 10px;
+      border-color: orange;
+      background-color: rgba(0, 0, 0, 0.239);
+    }
+
+    form label {
+      display: block;
+      margin: 10px;
+    }
+
+    form label input {
+      display: block;
+      margin: 0 auto;
+      border-radius: 10px;
+      outline: none;
+      padding: 5px;
+      border-color: orange;
+      margin-top: 10px;
+    }
+
+    .wrong {
+      background: lightcoral;
+      border-color: red;
+    }
+
+    .correct {
+      background: lightgreen;
+      border-color: green;
+    }
+    
   </style>
 </head>
 
 <body>
   <p><a href="index.html">Go back</a></p>
 
-  <label class="input">Enter your name
-    <input type="text" placeholder="Name" id="nameInput" />
-  </label>
+  <form action="" id="signInForm">
+    <fieldset>
+      <legend>Sign In</legend>
+      <label> Enter your login
+        <input type="text" placeholder="Login">
+      </label>
+  
+      <label> Enter your password
+        <input type="password" placeholder="Password">
+      </label>
+    </fieldset>
+  </form>
 
   <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
   <script src="js/task-02.js" type="module"></script>

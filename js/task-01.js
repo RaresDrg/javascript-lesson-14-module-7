@@ -10,20 +10,19 @@ const eventScrollCounter = {
   throttle: 0,
   debounceTrailing: 0,
   debounceLeading: 0,
-}
-
+};
 
 
 document.addEventListener("scroll", () => {
   eventScrollCounter.standard += 1;
   outputStandartEl.textContent = eventScrollCounter.standard;
-})
+});
 
 document.addEventListener("scroll", _.throttle(() => {
   eventScrollCounter.throttle += 1;
   outputThrottleEl.textContent = eventScrollCounter.throttle;
 }, 5000)
-)
+);
 
 document.addEventListener("scroll", _.debounce(() => {
   eventScrollCounter.debounceTrailing += 1;
